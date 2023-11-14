@@ -1,0 +1,16 @@
+<?php
+class factorial
+{
+	public function calculate($a)
+	{
+				$res=1;
+		for($i=1;$i<=$a;$i++)
+		{
+			$res=$res*$i;
+		}
+		echo"THE FACTORIAL IS $res<br>";
+	}
+}
+$s1=new factorial;
+$s1->calculate(4);
+?>

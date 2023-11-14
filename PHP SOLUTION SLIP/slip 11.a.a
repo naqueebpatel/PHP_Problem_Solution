@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<form name='f1' action="s.php" method="get">
+INPUT NUMBER A:<input type="text" name="t1"><br>
+INPUT NUMBER B:<input type="text" name="t2"><br>
+<input type="submit" name="s1" value="submit">
+
+</form>
+</body>
+</html>
+<?php
+if(isset($_GET['s1']))
+{
+	$a=$_GET['t1'];
+	$b=$_GET['t2'];
+function swap($a,$b)
+{
+	$temp=$a;
+	$a=$b;
+	$b=$temp;
+	echo"THE VALUE OF A AFTER SWAPPING IS $a<br>";
+	echo"THE VALUE OF B AFTER SWAPPING IS $b";
+}
+swap($a,$b);
+}
+?>

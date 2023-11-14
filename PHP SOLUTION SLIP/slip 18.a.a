@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+<form name="f" action="summ.php" method="get">
+ENTER NUMBER TO CHECK ARMSTRONG OR NOT:<input type="text" name="t1">
+<input type="submit" name="s1" value="submit">
+</form>
+</body>
+</html>
+
+
+<?php
+if(isset($_GET['s1']))
+{
+$n1=$_GET['t1'];
+$n2=$n1;
+$temp=0;
+while($n1>1)
+{
+	$r=$n1%10;
+	$temp=$temp+$r*$r*$r;
+	$n1=$n1/10;
+}
+if($temp==$n2)
+echo"number is armstrong";
+else
+echo"number is not armstrong";
+}
+?>

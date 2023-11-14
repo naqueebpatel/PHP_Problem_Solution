@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+<form name="form" method="post" action="files.php" enctype="multipart/form-data">
+FILE NAME:<input type="file" name="f1" value="upload"><br>
+<input type="submit" name="s1" value="submit">
+</form>
+</body>
+</html>
+<?php
+if(isset($_POST['s1']))
+{
+	echo"UPLOAD FILE :".$_FILES["f1"]["name"]."<br>";
+	echo"TYPE :".$_FILES["f1"]["type"]."<br>";
+	echo"SIZE :".($_FILES["f1"]["size"]/1024)."kb<br>";
+	//echo"STORED IN :".$_FILES["f1"]["tmp_name"]."<br>";
+}
+?>
+	

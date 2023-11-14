@@ -1,0 +1,49 @@
+<?php
+class student
+{
+	public $rno;
+	public $name;
+	public $age;
+	public $mobile;
+	
+	public function acceptstud($a,$b,$c,$d)
+	{
+		$this->rno=$a;
+		$this->name=$b;
+		$this->age=$c;
+		$this->mob=$d;
+	}
+	public function displaystud()
+	{
+		echo"STUDENT ROLL NO. IS $this->rno<br>";
+		echo"STUDENT NAME IS $this->name<br>";
+		echo"STUDENT AGE IS $this->age<br>";
+		echo"STUDENT MOBILE NO. IS $this->mob<br>";
+	}
+}
+class test extends student
+{
+	public $m1;
+	public $m2;
+	public $m3;
+	public $total;
+	
+	public function acceptmark($a,$b,$c,$d,$m1,$m2,$m3)
+	{
+		parent::acceptstud($a,$b,$c,$d);
+		$this->m1=$m1;
+		$this->m2=$m2;
+		$this->m3=$m3;
+		$this->total=($m1+$m2+$m3);
+	}
+	public function display()
+	{
+		parent::displaystud();
+		echo"TOTAL MARKS OF STUDENT IS $this->total<br>";
+	}
+}
+$t1=new test;
+$t1->acceptmark(1,'NAQUEEB',21,8083706718,95,98,97);
+$t1->display();
+?>
+	

@@ -1,0 +1,17 @@
+
+<?php
+	function reverse($num)
+	{
+		$sum=0;
+		while($num>1)
+		{
+			$r=$num%10;
+			$sum=($sum*10)+$r;
+			$num=$num/10;
+		}
+		echo"THE REVERSE NUMBER IS $sum";
+	}
+$num=123;
+reverse($num);
+?>
+	

@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title>form</title>
+	
+	</head>
+	
+	<body>
+		<form name="form1" action="testprog.php" method="get">
+		
+		INPUT BASE<input type="text" name="t1"><br>
+		INPUT HEIGHT<input type="text" name="t2"><br>
+        
+		
+		<input type="submit" name="s1" value="SUBMIT VALUE">
+		
+		
+		</form>
+	
+	</body>
+</html>
+
+<?php
+$n1=$_GET['t1'];
+$n2=$_GET['t2'];
+$area= (1/2)*$n1*$n2;
+echo"THE AREA OF TRIANGLE IS $area";
+
+
+?>

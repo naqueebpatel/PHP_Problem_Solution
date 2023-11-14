@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<form name="f1" action="palindrome.php" method="get">
+
+enter number to check:<input type="text" name="t1"><br>
+
+<input type="submit" name="s1" value="submit">
+
+</form>
+</body>
+</html>
+
+<?php
+if(isset($_GET['s1']))
+{
+$n1=$_GET['t1'];
+$n2=$n1;
+$rev=0;
+while($n1>1)
+{
+$r=$n1%10;
+$rev=($rev*10)+$r;
+$n1=$n1/10;
+}
+if($rev==$n2)
+echo"palindrome i.e $rev";
+else
+echo"not palindrome";
+}
+?>

@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+<form name="f" action="summ.php" method=get>
+
+enter string:<input type="text" name="t1">
+<input type="submit" name="s1" value="submit">
+</form>
+</body>
+</html>
+<?php
+if(isset($_GET['s1']))
+{
+	$n1=$_GET['t1'];
+	$n2=strrev($n1);
+	if($n1==$n2)
+		echo"string is palindrome i.e $n2";
+	else
+		echo"not a palindrome";
+}

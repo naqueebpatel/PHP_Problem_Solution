@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<form name="f1' action="celsius.php" method="get">
+INSERT IN CELSIUS TO CONVERT TO FAHRENHEIT:<input type="text" name="t1" >
+<input type="submit" name="s1" value="submit">
+</form>
+</body>
+<html> 
+<?php
+if(isset($_GET['s1']))
+{
+$a=$_GET['t1'];
+$f=($a-32)*(5/9);
+echo"<br>CELSIUS IS::$f";
+}
+?>
